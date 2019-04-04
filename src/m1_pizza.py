@@ -247,7 +247,6 @@ def draw_points_on_circle(window, circle, number_of_points, color):
 
     circle.attach_to(window)
     window.render()
-    points = []
     points = generate_points_on_circle(circle,number_of_points)
 
     for k in range(number_of_points):
@@ -360,7 +359,6 @@ def pizza(window, circle, number_of_slices, color, thickness):
 
     circle.attach_to(window)
     window.render()
-    points = []
     points = generate_points_on_circle(circle, number_of_slices)
 
     for k in range(number_of_slices):
@@ -586,7 +584,7 @@ def fancy_polygon(window, circle, number_of_lines, hops_to_next_point, color,
       :type thickness:       int
     """
     # -------------------------------------------------------------------------
-    # TODO: 10. Implement and test this function.
+    # DONE: 10. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPLEMENTATION REQUIREMENT:
@@ -605,7 +603,6 @@ def fancy_polygon(window, circle, number_of_lines, hops_to_next_point, color,
     points = []
     for k in range(2):
         points += generate_points_on_circle(circle,number_of_lines)
-    print(points)
 
     for k in range(number_of_lines):
         line = rg.Line(points[k],points[k+hops_to_next_point])
